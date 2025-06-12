@@ -8,7 +8,7 @@ function Appbar() {
                 <nav className="flex justify-between items-center py-6 ">
                     <div className="Logo text-xl font-bold text-teal-900">MedKit</div>
                     <div className="Links flex justify-between items-center font-semibold">
-                        <ul className="flex justify-center space-x-16 ">
+                        <ul className="flex justify-center space-x-16 z-10">
                         {pages.map((page) => (
                             <li key={page}>
                                 <Link to={`/${page.toLowerCase().replace(/\s+/g, '-')}`}>{page}</Link>
