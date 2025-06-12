@@ -16,6 +16,7 @@ function Footer() {
                 alignItems: { xs: 'flex-start', md: 'center' },
                 gap: { xs: 4, md: 0 },
                 mt: 15,
+                mb:20
             }}
         >
             {/* Left: Logo and Social */}
