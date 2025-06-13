@@ -4,7 +4,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 
-function Section2() {
+function HowItWorks() {
     return (
         <Box sx={{ width: '100%', py: { xs: 5, md: 10 }, background: '#fff' }}>
             <Typography
@@ -157,4 +157,4 @@ function Section2() {
     );
 }
 
-export default Section2;
+export default HowItWorks;

@@ -3,7 +3,7 @@ import TagFacesIcon from '@mui/icons-material/TagFaces';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CheckIcon from '@mui/icons-material/Check';
 
-function Section3() {
+function BookingSteps() {
     return (
         <Box
             sx={{
@@ -167,4 +167,4 @@ function Section3() {
     );
 }
 
-export default Section3;
+export default BookingSteps;

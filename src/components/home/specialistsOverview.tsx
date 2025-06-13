@@ -4,7 +4,7 @@ import StarIcon from '@mui/icons-material/Star';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import EastIcon from '@mui/icons-material/East';
 
-function Section4() {
+function SpecialistsOverview() {
     return (
         <Box
             sx={{
@@ -297,4 +297,4 @@ function Section4() {
     );
 }
 
-export default Section4;
+export default SpecialistsOverview;

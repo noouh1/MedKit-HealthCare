@@ -1,11 +1,11 @@
-import { Box, Typography, Card, TextField, MenuItem, Button, Avatar, Chip } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+import { Box, Typography, Avatar, Chip } from '@mui/material';
 import TagFacesIcon from '@mui/icons-material/TagFaces';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import StarIcon from '@mui/icons-material/Star';
+import BookingBar from './bookingBar';
 
-function Section1() {
+function HeroSection() {
     return (
         <Box
                 sx={{
@@ -77,75 +77,9 @@ function Section1() {
                         Select your doctor and preferred time slot to book your appointment
                     </Typography>
 
-                    <Card
-                        elevation={0}
-                        sx={{
-                            border: '2px solid #1e6c72',
-                            borderRadius: 2,
-                            background: '#f9fcff',
-                            p: { xs: 2, md: 3 },
-                            maxWidth: 700,
-                            mb: 4,
-                            boxShadow: '0 2px 8px rgba(30,108,114,0.04)',
-                            width: '100%',
-                            mx: { xs: 'auto', md: 0 },
-                        }}
-                    >
-                        <Typography variant="h6" fontWeight="bold" color="#1e6c72" mb={2}
-                            sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-                            Book your appointment
-                        </Typography>
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                flexDirection: { xs: 'column', sm: 'row', md: 'column', lg: 'row' },
-                                gap: 2,
-                            }}
-                        >
-                            <TextField
-                                select
-                                label="Specialty"
-                                size="small"
-                                sx={{ flex: 1, minWidth: 120 }}
-                            >
-                                <MenuItem value="general-practitioner">General Practitioner</MenuItem>
-                                <MenuItem value="dentist">Dentist</MenuItem>
-                                <MenuItem value="psychologist">Psychologist</MenuItem>
-                                <MenuItem value="neurology">Neurology</MenuItem>
-                            </TextField>
-                            <TextField
-                                label="Location"
-                                size="small"
-                                sx={{ flex: 1, minWidth: 120 }}
-                            />
-                            <TextField
-                                label="Date"
-                                type="date"
-                                size="small"
-                                sx={{ flex: 1, minWidth: 120 }}
-                                InputLabelProps={{ shrink: true }}
-                            />
-                            <Button
-                                variant="contained"
-                                color="secondary"
-                                startIcon={<SearchIcon />}
-                                sx={{
-                                    px: 3,
-                                    height: 40,
-                                    alignSelf: { xs: 'stretch', sm: 'center' },
-                                    bgcolor: '#b388d9',
-                                    color: 'white',
-                                    '&:hover': { bgcolor: '#a06cc1' },
-                                    minWidth: 100,
-                                    boxShadow: 'none',
-                                    fontWeight: 600,
-                                    fontSize: 16,
-                                }}
-                            >
-                                Search
-                            </Button>
-                        </Box>
-                    </Card>
+                    {/* Book Bar */}
+                    <BookingBar />
+                    
                 </Box>
 
                 {/* Right Side */}
@@ -285,4 +219,4 @@ function Section1() {
     );
 }
 
-export default Section1;
+export default HeroSection;
