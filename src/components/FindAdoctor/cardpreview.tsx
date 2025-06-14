@@ -20,7 +20,7 @@ import doctorImg6 from '../../assets/6.png';
 import doctorImg7 from '../../assets/7.png';
 import doctorImg8 from '../../assets/8.png';
 import doctorImg9 from '../../assets/9.png';
-import DoctorCard from '../../components/doctorCard/Doctorcard';
+import DoctorCard from './doctorCard/Doctorcard';
 import React from 'react';
 
 function Cardpreview() {
@@ -232,12 +232,12 @@ function Cardpreview() {
             </Button>
         </Box>
         {/* Left panel */}
-        <Box sx={{mx:'auto',mt:{sm:0,md:6} }}>
+        <Box sx={{mx:'auto',mt:{xs:0,md:6} }}>
             <Box className="smallnav" sx={{ my: 2, display:'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <Typography variant="h5" sx={{ color: '#1e6c72', my: 1, fontSize: {md:'15px',xs:'20px'}  }}>
+            <Typography variant="h5" sx={{ color: '#1e6c72', my: 1, fontSize: {md:'15px',xs:'15px'}  }}>
                     Showing 175 search results
             </Typography>
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 200  }}>
+            <FormControl variant="standard" sx={{ m: 1, minWidth: {md:200,xs:150}  }}>
             <InputLabel id="demo-simple-select-standard-label" sx={{color:'#1e6c72'}}>Sort by:Highest Rated</InputLabel>
         <Select
             labelId="demo-simple-select-standard-label"

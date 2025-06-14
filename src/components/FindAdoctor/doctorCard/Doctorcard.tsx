@@ -1,5 +1,6 @@
 import { Card, CardMedia, CardContent, Typography, Box, Button } from '@mui/material';
-import React, { useState } from 'react';
+import  { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface DoctorCardProps {
   image: string;
@@ -38,7 +39,9 @@ const DoctorCard = ({ image, name, specialty }: DoctorCardProps) => {
               Specialty: Senior at Endodontics
             </Typography>
             <Button variant="contained" sx={{ mt: 1, backgroundColor: '#1e6c72', color: 'white' }}>
-              Book an appointment
+              <Link to="/Book">
+                Book Appointment
+              </Link>
             </Button>
           </Box>
         )}
