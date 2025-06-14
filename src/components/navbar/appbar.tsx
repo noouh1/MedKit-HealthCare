@@ -1,73 +1,160 @@
-import {Link} from 'react-router-dom'
-import { Box, Container, Typography } from '@mui/material';
-import React from 'react';
-import { IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import {
+    AppBar,
+    Toolbar,
+    Typography,
+    IconButton,
+    Drawer,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemText,
+    Box,
+    Button,
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const pages = ['Home','Find a doctor', 'About Us', 'Client zone'];
-interface navprops {
-  logocolor: string;
-  ulcolor: string;
-}
-const Appbar = ({ logocolor,ulcolor }: navprops) => {
-    const [open, setOpen] = React.useState(false);
+const pages = [
+    { label: 'Home', path: '/home' },
+    { label: 'Find a doctor', path: '/find-a-doctor' },
+    { label: 'About us', path: '/about-us' },
+    { label: 'Client zone', path: '/client-zone' },
+];
+
+function Appbar() {
+    const [drawerOpen, setDrawerOpen] = useState(false);
 
     return (
-        <Box >
-            <Container maxWidth='xl' sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', py:4  }}>
-                <Typography className='Logo' variant="h6" sx={{ fontWeight: 'bold', color: logocolor }}>
-                    MedKit
-                </Typography>
-        <Box
-            component="ul"
+        <AppBar
+            position="static"
+            elevation={0}
             sx={{
-            display: { xs: 'none', md: 'flex' },
-            gap: 8,
-            listStyle: 'none',
-            m: 0,
-            p: 0,
-            alignItems: 'center',
-            fontWeight: 600,
+                background: '#eef6fa',
+                borderBottom: 'none',
+                boxShadow: 'none',
+                width: '100%',
+                p: 0,
             }}
         >
-            {pages.map((page) => (
-            <Box component="li" key={page} sx={{ m: 0, p: 0 }}>
-                <Link
-                to={`/${page.toLowerCase().replace(/\s+/g, '-')}`}
-                style={{
-                    color: ulcolor,
-                    textDecoration: 'none',
-                    fontSize: '1rem',
-                    fontWeight: 600,
+            <Toolbar
+                disableGutters
+                sx={{
+                    px: { xs: 2, sm: 4, md: 8 },
+                    minHeight: { xs: 56, sm: 64 },
+                    background: '#eef6fa',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
                 }}
+            >
+                {/* Logo */}
+                <Typography
+                    variant="h6"
+                    sx={{
+                        fontWeight: 'bold',
+                        color: '#25636b',
+                        fontSize: { xs: 20, sm: 22 },
+                        letterSpacing: 0.5,
+                        flexShrink: 0,
+                        ml: { xs: 0, sm: 2, md: 15 },
+                    }}
                 >
-                {page}
-                </Link>
-            </Box>
-            ))}
-        </Box>
-        <IconButton
-            sx={{ display: { xs: 'flex', md: 'none' }, ml: 2 }}
-            onClick={() => setOpen(true)}
-        >
-            <MenuIcon />
-        </IconButton>
-        <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-            <Box sx={{ width: 220, mt: 4 }}>
-            <List>
-                {pages.map((page) => (
-                <ListItem key={page} disablePadding>
-                    <ListItemButton onClick={() => setOpen(false)} component={Link} to={`/${page.toLowerCase().replace(/\s+/g, '-')}`} sx={{ color: '#1e6c72', fontWeight: 600 }}>
-                    <ListItemText primary={page} />
-                    </ListItemButton>
-                </ListItem>
-                ))}
-          </List>
-        </Box>
-      </Drawer>
-        </Container>
-         
-        </Box>
+                    MedKit
+                </Typography>
+                {/* Desktop Navigation */}
+                <Box
+                    sx={{
+                        display: { xs: 'none', md: 'flex' },
+                        ml: 'auto',
+                        borderRadius: 0,
+                        height: 64,
+                        alignItems: 'center',
+                        width: '100%',
+                        maxWidth: 900,
+                        pr: 0,
+                        zIndex: 1,
+                        justifyContent: 'flex-end',
+                    }}
+                >
+                    {pages.map((page, idx) => (
+                        <Button
+                            key={page.label}
+                            component={Link}
+                            to={page.path}
+                            sx={{
+                                color: '#fff',
+                                fontWeight: 600,
+                                fontSize: 16,
+                                textTransform: 'none',
+                                mx: 1.5,
+                                px: 2.5,
+                                border: idx === pages.length - 1 ? '1.5px solid #fff' : 'none',
+                                borderRadius: idx === pages.length - 1 ? '22px' : 0,
+                                background: 'transparent',
+                                '&:hover': {
+                                    background: idx === pages.length - 1 ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.10)',
+                                    borderColor: idx === pages.length - 1 ? '#fff' : 'none',
+                                },
+                            }}
+                        >
+                            {page.label}
+                        </Button>
+                    ))}
+                </Box>
+                {/* Mobile Menu Icon */}
+                <IconButton
+                    edge="end"
+                    color="inherit"
+                    aria-label="menu"
+                    onClick={() => setDrawerOpen(true)}
+                    sx={{ display: { xs: 'flex', md: 'none' }, ml: 'auto' }}
+                >
+                    <MenuIcon sx={{ fontSize: 32, color: '#25636b' }} />
+                </IconButton>
+                {/* Drawer for mobile */}
+                <Drawer
+                    anchor="right"
+                    open={drawerOpen}
+                    onClose={() => setDrawerOpen(false)}
+                    PaperProps={{
+                        sx: { width: 220, pt: 2, background: '#2d6c76' },
+                    }}
+                >
+                    <List>
+                        {pages.map((page, idx) => (
+                            <ListItem key={page.label} disablePadding>
+                                <ListItemButton
+                                    component={Link}
+                                    to={page.path}
+                                    onClick={() => setDrawerOpen(false)}
+                                    sx={{
+                                        color: '#fff',
+                                        fontWeight: 600,
+                                        fontSize: 16,
+                                        border: idx === pages.length - 1 ? '1.5px solid #fff' : 'none',
+                                        borderRadius: idx === pages.length - 1 ? '22px' : 0,
+                                        my: 0.5,
+                                        mx: 1,
+                                        justifyContent: 'center',
+                                    }}
+                                >
+                                    <ListItemText
+                                        primary={page.label}
+                                        primaryTypographyProps={{
+                                            fontWeight: 600,
+                                            color: '#fff',
+                                            fontSize: 16,
+                                            textAlign: 'center',
+                                        }}
+                                    />
+                                </ListItemButton>
+                            </ListItem>
+                        ))}
+                    </List>
+                </Drawer>
+            </Toolbar>
+        </AppBar>
     );
 }
 
