@@ -1,8 +1,9 @@
+import Appbar from "../../components/navbar/appbar"
 
 function home() {
   return (
     <div>
-      <h1>Home Test</h1>
+      <Appbar/>
     </div>
   )
 }
