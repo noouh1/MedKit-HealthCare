@@ -1,9 +1,9 @@
 import { Box } from '@mui/material';
-import HeroSection from '../../components/home/heroSection';
-import HowItWorks from '../../components/home/howItWorks';
-import BookingSteps from '../../components/home/bookingSteps';
-import SpecialistsOverview from '../../components/home/specialistsOverview';
-import Footer from '../../components/home/footer';
+import HeroSection from '../../components/home/HeroSection.tsx';
+import HowItWorks from '../../components/home/HowItWorks.tsx';
+import BookingSteps from '../../components/home/BookingSteps.tsx';
+import SpecialistsOverview from '../../components/home/SpecialistsOverview.tsx';
+import Footer from "../../components/findDoctor/Footer.tsx";
 
 function Home() {
     return (
