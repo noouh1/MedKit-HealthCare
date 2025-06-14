@@ -20,13 +20,13 @@ import doctorImg6 from '../../assets/6.png';
 import doctorImg7 from '../../assets/7.png';
 import doctorImg8 from '../../assets/8.png';
 import doctorImg9 from '../../assets/9.png';
-import DoctorCard from './doctorCard/Doctorcard';
+import DoctorCard from './DoctorCard.tsx';
 import React from 'react';
 
-function Cardpreview() {
-    const [value, setvalue] = React.useState('');
+function CardPreview() {
+    const [value, setValue] = React.useState('');
     const handleChange = (event: SelectChangeEvent) => {
-    setvalue(event.target.value);
+        setValue(event.target.value);
   };
     return (
     <Box sx={{ backgroundColor: '#f4f8fb', mx: 'auto', display: 'flex',flexDirection: 'row' }}>
@@ -285,4 +285,4 @@ function Cardpreview() {
   )
 }
 
-export default Cardpreview
+export default CardPreview

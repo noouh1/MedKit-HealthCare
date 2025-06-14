@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-    AppBar,
     Toolbar,
     Typography,
     IconButton,
@@ -11,7 +10,7 @@ import {
     ListItemButton,
     ListItemText,
     Box,
-    Button,
+    Button, AppBar
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -22,7 +21,7 @@ const pages = [
     { label: 'Client zone', path: '/client-zone' },
 ];
 
-function Appbar() {
+function NavBar() {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     return (
@@ -158,4 +157,4 @@ function Appbar() {
     );
 }
 
-export default Appbar;
+export default NavBar;

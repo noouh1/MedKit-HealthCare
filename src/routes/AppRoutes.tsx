@@ -1,18 +1,18 @@
 import { Routes,Route } from 'react-router-dom'
-import Home from '../pages/home/home'
-import FindADoctor from '../pages/FindADoctor/FindADoctor'
-import AboutUs from '../pages/AboutUs/AboutUs'
-import ClientZone from '../pages/ClientZone/ClientZone'
-import Book from '../pages/Book/Book'
-import Finish from '../pages/Finish/Finish'
+import Home from '../pages/home/Home.tsx'
+import FindDoctor from '../pages/findDoctor/FindDoctor.tsx'
+import AboutUs from '../pages/aboutUs/AboutUs'
+import ClientZone from '../pages/clientZone/ClientZone'
+import Book from '../pages/book/Book'
+import Finish from '../pages/finish/Finish'
 
-function Approutes() {
+function AppRoutes() {
   return (
     <div>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/find-a-doctor" element={<FindADoctor />} />
+            <Route path="/find-a-doctor" element={<FindDoctor />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/client-zone" element={<ClientZone />} />
             <Route path="/book" element={<Book />} />
@@ -23,4 +23,4 @@ function Approutes() {
   )
 }
 
-export default Approutes
+export default AppRoutes

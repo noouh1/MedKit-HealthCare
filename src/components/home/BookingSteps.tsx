@@ -134,7 +134,7 @@ function BookingSteps() {
                             'Find your specialist',
                             'Describe your problem',
                             'Set a meeting type',
-                            'Book your time',
+                            'book your time',
                         ].map((step) => (
                             <Box key={step} sx={{ display: 'flex', alignItems: 'center', mb: 1.5 }}>
                                 <CheckIcon sx={{ color: '#b388d9', fontSize: { xs: 20, sm: 22, md: 24 }, mr: 1 }} />

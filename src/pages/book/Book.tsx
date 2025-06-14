@@ -5,12 +5,12 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { LocalizationProvider, StaticDatePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import Appbar from '../../components/navbar/appbar';
+import NavBar from '../../components/navbar/NavBar.tsx';
 import Img from '../../assets/2.png';
 import React from 'react';
-import TimePickerGrid from '../../components/FindAdoctor/TimePickerGrid';
-import AppointmentTypeSelector from '../../components/FindAdoctor/AppointmentTypeSelector';
-import Footer from '../../components/FindAdoctor/Footer';
+import AppointmentTypeSelector from "../../components/findDoctor/AppointmentTypeSelector.tsx";
+import Footer from "../../components/findDoctor/Footer.tsx";
+import TimePickerGrid from "../../components/findDoctor/TimePickerGrid.tsx";
 
 function Book() {
   const [date, setDate] = React.useState<Date | null>(new Date());
@@ -20,7 +20,7 @@ function Book() {
   return (
     <Box sx={{ backgroundColor: '#f4f8fb' }}>
       <Box sx={{ backgroundColor: '#1e6c72' }}>
-        <Appbar logocolor="white" ulcolor="white" />
+        <NavBar />
       </Box>
       <Box
         sx={{

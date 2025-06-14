@@ -171,7 +171,7 @@ const AppointmentTypeSelector: React.FC<AppointmentTypeSelectorProps> = ({
       </Box>
     </Stack>
     {/* button */}
-    <Link to={'/Finish'} style={{ textDecoration: 'none', width: '100%', display: 'block' }}>
+    <Link to={'/finish'} style={{ textDecoration: 'none', width: '100%', display: 'block' }}>
       <Button
         variant="contained"
         fullWidth

@@ -3,7 +3,7 @@ import TagFacesIcon from '@mui/icons-material/TagFaces';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import StarIcon from '@mui/icons-material/Star';
-import BookingBar from './bookingBar';
+import BookingBar from '../search/BookingBar.tsx';
 
 function HeroSection() {
     return (
@@ -77,7 +77,7 @@ function HeroSection() {
                         Select your doctor and preferred time slot to book your appointment
                     </Typography>
 
-                    {/* Book Bar */}
+                    {/* book Bar */}
                     <BookingBar />
                     
                 </Box>

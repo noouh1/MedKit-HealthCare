@@ -1,5 +1,5 @@
 import {Box,Typography} from '@mui/material'
-import Searchbar from './SearchBar/searchbar'
+import Searchbar from './SearchBar.tsx'
 function Search() {
   return (
     <Box>

@@ -1,6 +1,6 @@
 import { Box, Typography, Button, Stack } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import Appbar from '../../components/navbar/appbar';
+import NavBar from '../../components/navbar/NavBar.tsx';
 import { Link } from 'react-router-dom';
 
 const Finish = () => {
@@ -8,7 +8,7 @@ const Finish = () => {
   return (
     <Box sx={{minHeight: '100vh', display: 'flex', flexDirection: 'column', background: '#1e6c72'}}>
         <Box sx={{ backgroundColor: '#1e6c72' }}>
-        <Appbar logocolor='white' ulcolor='white'/>
+            <NavBar />
         </Box>
         <Box
         sx={{

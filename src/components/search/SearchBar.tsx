@@ -1,7 +1,7 @@
 import {Box,TextField,MenuItem,Typography, Button, InputAdornment} from '@mui/material'
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 
-function searchbar() {
+function SearchBar() {
   return (
     <Box>
             <Box
@@ -88,4 +88,4 @@ function searchbar() {
   )
 }
 
-export default searchbar
+export default SearchBar
