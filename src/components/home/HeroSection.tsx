@@ -20,7 +20,7 @@ function HeroSection() {
                 <Box
                     sx={{
                         width: { xs: '100%', md: '60%' },
-                        p: { xs: 2, sm: 4, md: 24 },
+                        p: { xs: 2, sm: 4, md: 25 },
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',

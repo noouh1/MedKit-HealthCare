@@ -39,7 +39,7 @@ function NavBar() {
             <Toolbar
                 disableGutters
                 sx={{
-                    px: { xs: 2, sm: 4, md: 8 },
+                    px: { xs: 2, sm: 4, md: 10 },
                     minHeight: { xs: 56, sm: 64 },
                     background: '#eef6fa',
                     display: 'flex',

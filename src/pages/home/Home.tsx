@@ -4,7 +4,6 @@ import HowItWorks from '../../components/home/HowItWorks.tsx';
 import BookingSteps from '../../components/home/BookingSteps.tsx';
 import SpecialistsOverview from '../../components/home/SpecialistsOverview.tsx';
 import Footer from "../../components/findDoctor/Footer.tsx";
-// import Footer from '../../components/footer/Footer.tsx';
 
 function Home() {
     return (
