@@ -20,10 +20,10 @@ import doctorImg6 from '../../assets/6.png';
 import doctorImg7 from '../../assets/7.png';
 import doctorImg8 from '../../assets/8.png';
 import doctorImg9 from '../../assets/9.png';
-import DoctorCard from '../../components/doctorCard/doctorcard';
+import DoctorCard from '../../components/doctorCard/Doctorcard';
 import React from 'react';
 
-function Section2() {
+function Cardpreview() {
     const [value, setvalue] = React.useState('');
     const handleChange = (event: SelectChangeEvent) => {
     setvalue(event.target.value);
@@ -285,4 +285,4 @@ function Section2() {
   )
 }
 
-export default Section2
+export default Cardpreview

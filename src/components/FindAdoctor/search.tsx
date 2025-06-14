@@ -1,6 +1,6 @@
 import {Box,Typography} from '@mui/material'
 import Searchbar from '../SearchBar/searchbar'
-function section1() {
+function Search() {
   return (
     <Box>
         <Box sx={{ backgroundColor: '#1e6c72' ,minHeight: '50vh',mx: 'auto'}}>    
@@ -18,4 +18,4 @@ function section1() {
   )
 }
 
-export default section1
+export default Search

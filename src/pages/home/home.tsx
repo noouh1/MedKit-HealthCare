@@ -3,7 +3,7 @@ import Appbar from "../../components/navbar/appbar"
 function home() {
   return (
     <div>
-      <Appbar/>
+      <Appbar logocolor="black" ulcolor="black"/>
     </div>
   )
 }
