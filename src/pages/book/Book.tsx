@@ -1,11 +1,10 @@
-import { Avatar, Box, Card, IconButton, Stack, Typography } from '@mui/material';
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Avatar, Box, Card, Stack, Typography } from '@mui/material';
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { LocalizationProvider, StaticDatePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import NavBar from '../../components/navbar/NavBar.tsx';
 import Img from '../../assets/2.png';
 import React from 'react';
 import AppointmentTypeSelector from "../../components/findDoctor/AppointmentTypeSelector.tsx";
@@ -19,9 +18,6 @@ function Book() {
 
   return (
     <Box sx={{ backgroundColor: '#f4f8fb' }}>
-      <Box sx={{ backgroundColor: '#1e6c72' }}>
-        <NavBar />
-      </Box>
       <Box
         sx={{
           color: 'white',
@@ -79,27 +75,25 @@ function Book() {
           <Avatar
             src={Img}
             alt="Mary Weather, MD"
-            sx={{ width: 80, height: 80, mr: { sm: 3, xs: 0 }, mb: { xs: 2, sm: 0 } }}
+            sx={{ width: 100, height: 100, mr: { sm: 3, xs: 0 }, mb: { xs: 2, sm: 0 } }}
           />
           <Box sx={{ flex: 1 }}>
             <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#1e6c72' }}>
               Mary Weather, MD
             </Typography>
             <Typography sx={{ color: '#5a7d7d' }}>Endodontics</Typography>
-            <Typography sx={{ color: '#222', mt: 0.5, fontSize: 15 }}>
+            <Typography sx={{ color: '#222', mt: 2, fontSize: 15 }}>
               Mon–Fri, 8:30–11:00 AM
             </Typography>
           </Box>
           <Stack direction="row" spacing={2} sx={{ mt: { xs: 2, sm: 0 } }}>
-            <IconButton sx={{ background: '#f4f8fb', boxShadow: 1 }}>
-              <PhoneIcon sx={{ color: '#1e6c72' }} />
-            </IconButton>
-            <IconButton sx={{ background: '#f4f8fb', boxShadow: 1 }}>
-              <EmailIcon sx={{ color: '#1e6c72' }} />
-            </IconButton>
-            <IconButton sx={{ background: '#f4f8fb', boxShadow: 1 }}>
-              <LocationOnIcon sx={{ color: '#1e6c72' }} />
-            </IconButton>
+                <Box className="icons" sx={{ display: 'flex', gap: 1, mt: 2 }}>
+                        {[LocalPhoneOutlinedIcon, EmailOutlinedIcon, CalendarTodayOutlinedIcon].map((Icon, i) => (
+                          <Box key={i} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center',  borderRadius: '50%', width: 40, height: 40,background: 'white',boxShadow: '0 4px 16px rgba(30, 108, 114, 0.10)' }}>
+                            <Icon sx={{ color: '#1e6c72', fontSize: 17 }} />
+                          </Box>
+                      ))}
+              </Box>
           </Stack>
         </Box>
         {/* Section 3: Calendar */}

@@ -4,11 +4,8 @@ import VideoCameraFrontIcon from '@mui/icons-material/VideoCameraFront';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import HomeIcon from '@mui/icons-material/Home';
 import { Link } from 'react-router-dom';
+import type { AppointmentTypeSelectorProps } from '../../types/Book.tsx';
 
-interface AppointmentTypeSelectorProps {
-  value: string;
-  onChange: (val: string) => void;
-}
 
 const AppointmentTypeSelector: React.FC<AppointmentTypeSelectorProps> = ({
   value,
