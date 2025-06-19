@@ -11,7 +11,7 @@ const AppointmentTypeSelector: React.FC<AppointmentTypeSelectorProps> = ({
   value,
   onChange,
 }) => (
-  <Box sx={{ width: '100%', mt: 6 }}>
+  <Box sx={{ width: '100%', mt: 3 }}>
     <Typography
       variant="h5"
       sx={{
@@ -172,10 +172,10 @@ const AppointmentTypeSelector: React.FC<AppointmentTypeSelectorProps> = ({
           background: '#b39ddb',
           color: '#fff',
           fontWeight: 600,
-          fontSize: 18,
-          borderRadius: 2,
+          fontSize: 14,
+          borderRadius: 1,
           py: 1.5,
-          mt: 2,
+          my: 2,
           boxShadow: 'none',
           '&:hover': {
             background: '#a084ca',
