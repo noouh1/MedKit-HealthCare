@@ -24,14 +24,33 @@ const TimePickerGrid: React.FC<TimePickerGridProps> = ({ value, onChange }) => {
   }
 
   return (
-    <Box sx={{ textAlign: 'center', minWidth: 800, flex: 2 }}>
-      <Typography variant="h5" sx={{ fontWeight: 'bold', color: '#1e6c72', mb: 3 }}>
+    <Box
+      sx={{
+        textAlign: 'center',
+        width: '100%',
+        maxWidth: 900,
+        mx: 'auto',
+        flex: 2,
+        p: { xs: 1, sm: 2, md: 3 },
+      }}
+    >
+      <Typography
+        variant="h5"
+        sx={{
+          fontWeight: 'bold',
+          color: '#1e6c72',
+          mb: 3,
+          fontSize: { xs: 18, sm: 22, md: 26 },
+        }}
+      >
         Pick an available time
       </Typography>
-      <Box sx={{ mx: 'auto' }}>
-        <Grid container spacing={2} justifyContent="center">
+      <Box sx={{ width: '100%', mx: 'auto' }}>
+        <Grid container spacing={{ xs: 1, sm: 2, md: 3 }} justifyContent="center">
           {times.map((time) => (
-            <Grid key={time.label}>
+            <Grid
+              sx={{ display: 'flex', justifyContent: 'center' }}
+            >
               <Button
                 fullWidth
                 variant="outlined"
@@ -40,9 +59,9 @@ const TimePickerGrid: React.FC<TimePickerGridProps> = ({ value, onChange }) => {
                 sx={{
                   borderRadius: 2,
                   fontWeight: value === time.label ? 600 : 400,
-                  fontSize: 16,
-                  minWidth: 110,
-                  minHeight: 56,
+                  fontSize: { xs: 13, sm: 15, md: 16 },
+                  minWidth: 0,
+                  minHeight: { xs: 40, sm: 48, md: 56 },
                   color: !time.available ? '#bdbdbd' : '#1e6c72',
                   borderColor: value === time.label ? '#b39ddb' : 'white',
                   background: value === time.label ? 'rgba(179,157,219,0.08)' : '#fff',
@@ -55,6 +74,7 @@ const TimePickerGrid: React.FC<TimePickerGridProps> = ({ value, onChange }) => {
                   },
                   transition: 'background 0.2s, border-color 0.2s',
                   position: 'relative',
+                  px: { xs: 0.5, sm: 1.5, md: 2 },
                 }}
               >
                 {time.label}
