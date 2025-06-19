@@ -60,7 +60,9 @@ const TimePickerGrid: React.FC<TimePickerGridProps> = ({ value, onChange }) => {
                   borderRadius: 2,
                   fontWeight: value === time.label ? 600 : 400,
                   fontSize: { xs: 13, sm: 15, md: 16 },
-                  minWidth: 0,
+                  minWidth: 120,
+                  px: { xs: 2, sm: 3, md: 2 },
+                  flex: 1,
                   minHeight: { xs: 40, sm: 48, md: 56 },
                   color: !time.available ? '#bdbdbd' : '#1e6c72',
                   borderColor: value === time.label ? '#b39ddb' : 'white',
@@ -74,7 +76,6 @@ const TimePickerGrid: React.FC<TimePickerGridProps> = ({ value, onChange }) => {
                   },
                   transition: 'background 0.2s, border-color 0.2s',
                   position: 'relative',
-                  px: { xs: 0.5, sm: 1.5, md: 2 },
                 }}
               >
                 {time.label}

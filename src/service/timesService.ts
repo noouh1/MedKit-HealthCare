@@ -7,7 +7,7 @@ export const useTimeSlots = () => {
   return useQuery<TimeSlot[]>({
     queryKey: ['timeSlots'],
     queryFn: () => {
-        return generateTimeSlots(18); 
+        return generateTimeSlots(15); 
     },
     staleTime: 1000 * 60 * 5, 
   });
