@@ -177,8 +177,27 @@ return (
                             Senior at Endodontics
                           </Typography>
                         </Box>
-                        <Link to="/book" style={{ textDecoration: 'none' }}>
-                          <Button variant="contained" sx={{ mt: 2, bgcolor: '#1e6c72',fontSize:12,px:4,py:1, '&:hover': { bgcolor: '#155a60' } }}>
+                        <Link to="/book" state={{
+                                  image: card.image,
+                                  name: card.name,
+                                  specialty: card.specialty,
+                                }}style={{ textDecoration: 'none' }}>
+                          <Button
+                            variant="contained"
+                            sx={{
+                              mt: 2,
+                              bgcolor: '#1e6c72',
+                              fontSize: { xs: 12, sm: 14 },
+                              px: { xs: 3, sm: 4 },
+                              py: { xs: 1, sm: 1.5 },
+                              fontWeight: 600,
+                              borderRadius: 2,
+                              '&:hover': { bgcolor: '#155a60' },
+                            }}
+                            fullWidth
+                            onClick={() => {
+                              return {cardId: card.id};}}
+                          >
                             Book an Appointment
                           </Button>
                         </Link>

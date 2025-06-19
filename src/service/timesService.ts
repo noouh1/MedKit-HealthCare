@@ -1,7 +1,14 @@
-// use react-query for fetching times and loading
-//
-// import { useQuery } from '@tanstack/react-query';
-// import { getTimes } from '../api/timesApi';
+// hooks/useTimeSlots.ts
+import { useQuery } from '@tanstack/react-query';
+import { generateTimeSlots } from '../api/timesApi';
+import type { TimeSlot } from '../types/Book';
 
-
-// const times = useQuery()
+export const useTimeSlots = () => {
+  return useQuery<TimeSlot[]>({
+    queryKey: ['timeSlots'],
+    queryFn: () => {
+        return generateTimeSlots(18); 
+    },
+    staleTime: 1000 * 60 * 5, 
+  });
+}

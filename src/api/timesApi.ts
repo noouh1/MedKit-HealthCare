@@ -1,22 +1,20 @@
-const getTimes = () => {
-    return  [
-        { label: '8:30 AM', available: false },
-        { label: '8:45 AM', available: true },
-        { label: '9:00 AM', available: true },
-        { label: '9:15 AM', available: true },
-        { label: '9:30 AM', available: false },
-        { label: '9:45 AM', available: true },
-        { label: '10:00 AM', available: false },
-        { label: '10:15 AM', available: true },
-        { label: '10:30 AM', available: true },
-        { label: '10:45 AM', available: true },
-        { label: '11:00 AM', available: true },
-        { label: '11:15 AM', available: true },
-        { label: '11:30 AM', available: false },
-        { label: '11:45 AM', available: false },
-        { label: '1:00 PM', available: true },
-    ];
-}
+import type { TimeSlot } from '../types/Book';
 
+export const getRandomTime = (): string => {
+  const hour = Math.floor(Math.random() * 10) + 7; 
+  const minutes = Math.random() < 0.5 ? '00' : '30';
+  const period = hour >= 12 ? 'PM' : 'AM';
+  const displayHour = hour > 12 ? hour - 12 : hour;
+  return `${displayHour}:${minutes} ${period}`;
+};
 
-export { getTimes };
+export const generateTimeSlots = (count: number = 15): TimeSlot[] => {
+  const set = new Set<string>();
+  while (set.size < count) {
+    set.add(getRandomTime());
+  }
+  return Array.from(set).map((label) => ({
+    label,
+    available: Math.random() > 0.2,
+  }));
+};
