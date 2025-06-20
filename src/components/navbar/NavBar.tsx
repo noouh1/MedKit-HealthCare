@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-    AppBar,
     Toolbar,
     Typography,
     IconButton,
@@ -11,7 +10,7 @@ import {
     ListItemButton,
     ListItemText,
     Box,
-    Button,
+    Button, AppBar
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -22,7 +21,7 @@ const pages = [
     { label: 'Client zone', path: '/client-zone' },
 ];
 
-function Appbar() {
+function NavBar() {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     return (
@@ -40,9 +39,9 @@ function Appbar() {
             <Toolbar
                 disableGutters
                 sx={{
-                    px: { xs: 2, sm: 4, md: 8 },
+                    px: { xs: 2, sm: 4, md: 10 },
                     minHeight: { xs: 56, sm: 64 },
-                    background: '#eef6fa',
+                    background: '#1e6c72',
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
@@ -53,7 +52,7 @@ function Appbar() {
                     variant="h6"
                     sx={{
                         fontWeight: 'bold',
-                        color: '#25636b',
+                        color: 'white',
                         fontSize: { xs: 20, sm: 22 },
                         letterSpacing: 0.5,
                         flexShrink: 0,
@@ -158,4 +157,4 @@ function Appbar() {
     );
 }
 
-export default Appbar;
+export default NavBar;
