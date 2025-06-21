@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Finish = () => {
 
   return (
-    <Box sx={{minHeight: '100vh', display: 'flex', flexDirection: 'column', background: '#1e6c72'}}>
+    <Box sx={{minHeight: '95vh', display: 'flex', flexDirection: 'column', background: '#1e6c72'}}>
         <Box
         sx={{
             flex: 1,

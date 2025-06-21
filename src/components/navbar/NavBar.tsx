@@ -29,9 +29,7 @@ function NavBar() {
             position="static"
             elevation={0}
             sx={{
-                background: '#eef6fa',
                 borderBottom: 'none',
-                boxShadow: 'none',
                 width: '100%',
                 p: 0,
             }}
@@ -45,6 +43,7 @@ function NavBar() {
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'space-between',
+                    boxShadow: '0 6px 24px 0 rgba(30,108,114,0.5)',
                 }}
             >
                 {/* Logo */}

@@ -3,6 +3,7 @@ import TagFacesIcon from '@mui/icons-material/TagFaces';
 import StarIcon from '@mui/icons-material/Star';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import EastIcon from '@mui/icons-material/East';
+import { Link } from 'react-router-dom';
 
 function SpecialistsOverview() {
     return (
@@ -183,7 +184,8 @@ function SpecialistsOverview() {
                         </Typography>
                     </Box>
                 </Box>
-                <Button
+                <Link to="/find-a-doctor">
+                    <Button
                     variant="text"
                     sx={{
                         color: '#225b63',
@@ -201,6 +203,7 @@ function SpecialistsOverview() {
                 >
                     Show more
                 </Button>
+                </Link>
             </Box>
             {/* Right: Doctor image and chips */}
             <Box
