@@ -1,5 +1,6 @@
 import { Box, Typography, Card, TextField, MenuItem, Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom';
 
 function BookingBar() {
     return (
@@ -51,7 +52,8 @@ function BookingBar() {
                     sx={{ flex: 1, minWidth: 120 }}
                     InputLabelProps={{ shrink: true }}
                 />
-                <Button
+                <Link to="/find-a-doctor">
+                    <Button
                     variant="contained"
                     color="secondary"
                     startIcon={<SearchIcon />}
@@ -70,6 +72,7 @@ function BookingBar() {
                 >
                     Search
                 </Button>
+                </Link>
             </Box>
         </Card>
     );

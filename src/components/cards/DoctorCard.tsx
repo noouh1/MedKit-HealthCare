@@ -25,10 +25,10 @@ const cardsData: CardData[] = Array.from({ length: 9 }, (_, i) => ({
 const DoctorCard: React.FC = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const theme = useTheme();
-const isMediumScreen = useMediaQuery(theme.breakpoints.between('sm', 'md'));
-const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-const cardsPerRow = isSmallScreen ? 1 : isMediumScreen ? 2 : 3;
+  const cardsPerRow = isSmallScreen ? 1 : isMediumScreen ? 2 : 3;
 
   const handleCardClick = (index: number) => {
     setExpandedIndex(index === expandedIndex ? null : index);
@@ -49,7 +49,6 @@ const cardsPerRow = isSmallScreen ? 1 : isMediumScreen ? 2 : 3;
     return false;
   };
 
-// Prepare rows for rendering cards in a grid
 const rows: CardData[][] = [];
 for (let i = 0; i < cardsData.length; i += cardsPerRow) {
   rows.push(cardsData.slice(i, i + cardsPerRow));
@@ -81,11 +80,12 @@ return (
                 onClick={() => handleCardClick(index)}
                 sx={{
                   flex: isExpanded && !isSmallScreen ? 2 : 1,
-                  transition: 'all 0.4s ease',
+                  transition: 'all 800ms cubic-bezier(0.4,0,0.2,1)',
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
                   padding: 0,
+                  transform: isExpanded ? 'scale(1.04)' : 'scale(1)',
                 }}
               >
                 <Box
@@ -96,7 +96,7 @@ return (
                     px: isExpanded ? (isSmallScreen ? 4 : 10) : 12,
                     textAlign: isExpanded ? 'left' : 'center',
                     boxShadow: '0 4px 16px rgba(30, 108, 114, 0.10)',
-                    transition: 'all 0.9s ease',
+                    transition:'all 800ms ease' ,
                     minHeight: 320,
                     width: '100%',
                     display: 'flex',
@@ -128,7 +128,7 @@ return (
                         borderRadius: '50%',
                         objectFit: 'cover',
                         mb: 2,
-                        transition: 'all 0.4s ease',
+                        transition: 'all 0.5s ease',
                         boxShadow: '0 2px 8px rgba(30, 108, 114, 0.1)',
                       }}
                     />
@@ -195,8 +195,7 @@ return (
                               '&:hover': { bgcolor: '#155a60' },
                             }}
                             fullWidth
-                            onClick={() => {
-                              return {cardId: card.id};}}
+
                           >
                             Book an Appointment
                           </Button>

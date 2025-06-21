@@ -36,7 +36,6 @@ const Calendar = () => {
                 '& .MuiDayCalendar-weekDayLabel': {
                     fontSize: 20,        
                     fontWeight: 500,     
-                    px: 2,               
                     },
                     '& .MuiDayCalendar-daysContainer': {
                         justifyContent: 'space-between', 
@@ -44,19 +43,13 @@ const Calendar = () => {
                     '& .MuiPickersDay-root': {
                         fontWeight: 500,
                         fontSize: 14,
-                        mx: 0,
-                        minWidth: 0,
-                        flex: 1, 
-                        maxWidth: 'none',
+                        px:2,
+                        gap: 4, 
                     },
                   '& .Mui-selected': {
                     border: '2px solid #b39ddb',
-                    background: '#fff !important',
-                    color: '#1e6c72',
-                  },
-                  '& .MuiPickersDay-today': {
-                    border: '1px solid #b39ddb',
-                    
+                    background: '#1e6c72 !important',
+                    color: 'white',
                   },
                   '& .MuiPickersCalendarHeader-label': {
                     fontWeight: 600,
@@ -71,7 +64,6 @@ const Calendar = () => {
                     color: '#bdbdbd',
                   },
                   '& .MuiPickersDay-root.Mui-selected:hover': {
-                    backgroundColor: '#b39ddb',
                     color: '#1e6c72',
                   },
                 }}
