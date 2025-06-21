@@ -109,7 +109,7 @@ function NavBar() {
                     onClick={() => setDrawerOpen(true)}
                     sx={{ display: { xs: 'flex', md: 'none' }, ml: 'auto' }}
                 >
-                    <MenuIcon sx={{ fontSize: 32, color: '#25636b' }} />
+                    <MenuIcon sx={{ fontSize: 32, color: 'white' }} />
                 </IconButton>
                 {/* Drawer for mobile */}
                 <Drawer
