@@ -1,6 +1,6 @@
 import {Box,TextField,MenuItem,Typography, Button} from '@mui/material'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import CountrySelect2 from './ChooseCountry_2';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();
 
@@ -53,6 +53,7 @@ function SearchBar() {
             <QueryClientProvider client={queryClient}>
               <CountrySelect2 label="Location"/>
             </QueryClientProvider>
+            
             <TextField
               fullWidth
               label="Date"
