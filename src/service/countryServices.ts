@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import { Countries } from '../api/countryApi';
+import fetchCountries  from '../api/countryApi';
 
 export function useCountriesQuery() {
     return useQuery({
         queryKey: ['countries'],
-        queryFn: async () => Countries,
-        staleTime: Infinity,
+        queryFn: fetchCountries,
+        staleTime: 1000 * 10,
     });
 }

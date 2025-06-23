@@ -11,7 +11,7 @@ import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import React from 'react';
 import DoctorCard from './DoctorCard.tsx';
-import CountrySelect2 from '../search/ChooseCountry_2.tsx';
+import CountrySelect from '../search/ChooseCountry.tsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();
@@ -186,7 +186,7 @@ function CardPreview() {
                     Country
                 </Typography>
                 <QueryClientProvider client={queryClient}>
-                    <CountrySelect2 label="Denmark[DK]"/>
+                    <CountrySelect label="Denmark[DK]"/>
                 </QueryClientProvider>
                 <Typography variant="body1" sx={{ color: '#1e6c72', my: 1, fontSize: {md:'15px',xs:'15px'}, fontWeight:'bold'}}>
                     Disctrict

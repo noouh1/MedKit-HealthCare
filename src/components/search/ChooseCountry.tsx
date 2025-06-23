@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -6,26 +5,27 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { useCountriesQuery } from '../../service/countryServices';
 import { InputAdornment, CircularProgress } from '@mui/material';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
+import type { CountryType2 } from '../../types/countryType';
 
 interface CountrySelectProps {
     label?: string;
     width?: string | number;
 }
 
-function CountrySelect({ label = "Location", width='100%' }: CountrySelectProps) {
+function CountrySelect({ label = "Location", width = '100%' }: CountrySelectProps) {
     const { data: countries = [], isLoading } = useCountriesQuery();
-    const [selectedCountry, setSelectedCountry] = useState<any>(null);
+    const [selectedCountry, setSelectedCountry] = useState<CountryType2 | null>(null);
 
     return (
         <Autocomplete
             id="country-select-demo"
-            sx={{ width:{ xs: '100%', md: width } }}
+            sx={{ width: { xs: '100%', md: width } }}
             options={countries}
             loading={isLoading}
             autoHighlight
             value={selectedCountry}
             onChange={(_, newValue) => setSelectedCountry(newValue)}
-            getOptionLabel={(option) => option.label}
+            getOptionLabel={(option) => option.name?.common || ''}
             ListboxProps={{
                 style: {
                     maxHeight: 48 * 4,
@@ -41,11 +41,10 @@ function CountrySelect({ label = "Location", width='100%' }: CountrySelectProps)
                     <img
                         loading="lazy"
                         width="20"
-                        srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
-                        src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+                        src={option.flags.png}
                         alt=""
                     />
-                    {option.label} ({option.code}) +{option.phone}
+                    {option.name.common} ({option.region})
                 </Box>
             )}
             renderInput={(params) => (
@@ -62,9 +61,8 @@ function CountrySelect({ label = "Location", width='100%' }: CountrySelectProps)
                                 <img
                                     loading="lazy"
                                     width="24"
-                                    srcSet={`https://flagcdn.com/w40/${selectedCountry.code?.toLowerCase()}.png 2x`}
-                                    src={`https://flagcdn.com/w20/${selectedCountry.code?.toLowerCase()}.png`}
-                                    alt={selectedCountry.label}
+                                    src={selectedCountry.flags.png}
+                                    alt={selectedCountry.name.common}
                                     style={{ borderRadius: 4, marginRight: 0 }}
                                 />
                             </Box>

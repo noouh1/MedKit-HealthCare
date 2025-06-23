@@ -2,7 +2,7 @@ import { Box, Typography, Card, TextField, MenuItem, Button } from '@mui/materia
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import CountrySelect2 from './ChooseCountry_2';
+import CountrySelect2 from './ChooseCountry';
 
 const queryClient = new QueryClient();
 
