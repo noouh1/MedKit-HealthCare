@@ -1,5 +1,6 @@
 import { Box, Typography, Card, TextField, MenuItem, Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import CountrySelect2 from './ChooseCountry_2';
 
@@ -53,7 +54,8 @@ function BookingBar() {
                     sx={{ flex: 1, minWidth: 120 }}
                     InputLabelProps={{ shrink: true }}
                 />
-                <Button
+                <Link to="/find-a-doctor">
+                    <Button
                     variant="contained"
                     color="secondary"
                     startIcon={<SearchIcon />}
@@ -72,6 +74,7 @@ function BookingBar() {
                 >
                     Search
                 </Button>
+                </Link>
             </Box>
         </Card>
     );

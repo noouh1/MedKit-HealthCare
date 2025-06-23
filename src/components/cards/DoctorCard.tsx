@@ -6,6 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+
 import type { CardData } from '../../types/FindDoctor';
 import { Link } from 'react-router-dom';
 import { imgs, names, specialties } from '../../types/FindDoctor';
@@ -25,10 +26,10 @@ const cardsData: CardData[] = Array.from({ length: 9 }, (_, i) => ({
 const DoctorCard: React.FC = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const theme = useTheme();
-const isMediumScreen = useMediaQuery(theme.breakpoints.between('sm', 'md'));
-const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-const cardsPerRow = isSmallScreen ? 1 : isMediumScreen ? 2 : 3;
+  const cardsPerRow = isSmallScreen ? 1 : isMediumScreen ? 2 : 3;
 
   const handleCardClick = (index: number) => {
     setExpandedIndex(index === expandedIndex ? null : index);
@@ -49,7 +50,6 @@ const cardsPerRow = isSmallScreen ? 1 : isMediumScreen ? 2 : 3;
     return false;
   };
 
-// Prepare rows for rendering cards in a grid
 const rows: CardData[][] = [];
 for (let i = 0; i < cardsData.length; i += cardsPerRow) {
   rows.push(cardsData.slice(i, i + cardsPerRow));
@@ -81,7 +81,7 @@ return (
                 onClick={() => handleCardClick(index)}
                 sx={{
                   flex: isExpanded && !isSmallScreen ? 2 : 1,
-                  transition: 'all 0.4s ease',
+                  transition: 'all 0.5s ease',
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
@@ -94,9 +94,9 @@ return (
                     borderRadius: '18px',
                     py: 2,
                     px: isExpanded ? (isSmallScreen ? 4 : 10) : 12,
-                    textAlign: isExpanded ? 'left' : 'center',
+                    textAlign: 'center',
                     boxShadow: '0 4px 16px rgba(30, 108, 114, 0.10)',
-                    transition: 'all 0.9s ease',
+                    transition:' right 0.5s' ,
                     minHeight: 320,
                     width: '100%',
                     display: 'flex',
@@ -104,10 +104,7 @@ return (
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: isExpanded ? 6 : 2,
-                    '&:hover img': {
-                      transform: 'scale(1.09) rotate(-2deg)',
-                      boxShadow: '0 12px 32px rgba(30, 108, 114, 0.22)',
-                    },
+
                   }}
                 >
                   <Box
@@ -123,16 +120,15 @@ return (
                       src={card.image}
                       alt={card.name}
                       sx={{
-                        width: isExpanded ? 100 : 150,
-                        height: isExpanded ? 100 : 150,
+                        width: isExpanded ? 150 : 150,
+                        height: isExpanded ? 150 : 150,
                         borderRadius: '50%',
                         objectFit: 'cover',
                         mb: 2,
-                        transition: 'all 0.4s ease',
                         boxShadow: '0 2px 8px rgba(30, 108, 114, 0.1)',
                       }}
                     />
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#1e6c72', fontSize: isExpanded ? 17 : 19 }}>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: '#1e6c72', fontSize: 18 }}>
                       {card.name}
                     </Typography>
                     <Typography variant="body2" sx={{ color: '#555', fontSize: 14 }}>
@@ -195,8 +191,7 @@ return (
                               '&:hover': { bgcolor: '#155a60' },
                             }}
                             fullWidth
-                            onClick={() => {
-                              return {cardId: card.id};}}
+
                           >
                             Book an Appointment
                           </Button>

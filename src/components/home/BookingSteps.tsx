@@ -2,6 +2,7 @@ import { Box, Typography, Avatar, Chip, Button } from '@mui/material';
 import TagFacesIcon from '@mui/icons-material/TagFaces';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CheckIcon from '@mui/icons-material/Check';
+import { Link } from 'react-router-dom';
 
 function BookingSteps() {
     return (
@@ -144,7 +145,8 @@ function BookingSteps() {
                             </Box>
                         ))}
                     </Box>
-                    <Button
+                        <Link to="/find-a-doctor">
+                        <Button
                         variant="contained"
                         sx={{
                             bgcolor: '#225b63',
@@ -161,6 +163,7 @@ function BookingSteps() {
                     >
                         Book an appointment
                     </Button>
+                    </Link>
                 </Box>
             </Box>
         </Box>
