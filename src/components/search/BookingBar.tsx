@@ -1,6 +1,10 @@
 import { Box, Typography, Card, TextField, MenuItem, Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import CountrySelect2 from './ChooseCountry_2';
+
+const queryClient = new QueryClient();
 
 function BookingBar() {
     return (
@@ -40,11 +44,9 @@ function BookingBar() {
                     <MenuItem value="psychologist">Psychologist</MenuItem>
                     <MenuItem value="neurology">Neurology</MenuItem>
                 </TextField>
-                <TextField
-                    label="Location"
-                    size="small"
-                    sx={{ flex: 1, minWidth: 120 }}
-                />
+                <QueryClientProvider client={queryClient}>
+                    <CountrySelect2 label="Location" width={160}/>
+                </QueryClientProvider>
                 <TextField
                     label="Date"
                     type="date"
