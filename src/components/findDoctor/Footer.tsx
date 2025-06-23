@@ -29,7 +29,7 @@ function Footer() {
                             <TwitterIcon sx={{ fontSize: 38, color: '#1e6c72', cursor: 'pointer' }} />
                         </Link>
                     <Link href="https://www.spotify.com" aria-label="Spotify" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>
-                        <img src="../../public/iconmonstr-spotify-1-240.png" alt="Spotify" style={{ width: 28, height: 28 }} />
+                        <img src="/iconmonstr-spotify-1-240.png" alt="Spotify" style={{ width: 28, height: 28 }} />
                     </Link>
                     </Stack>
                 </Grid>

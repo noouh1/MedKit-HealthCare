@@ -4,6 +4,7 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import StarIcon from '@mui/icons-material/Star';
 import BookingBar from '../search/BookingBar.tsx';
+import  homeImage from'../../../images/home.jpg'
 
 function HeroSection() {
     return (
@@ -102,7 +103,7 @@ function HeroSection() {
                 >
                     <Box sx={{ position: 'relative', textAlign: 'center', width: { xs: '100%', md: 'auto' } }}>
                         <Avatar
-                            src="../../../images/home.jpg"
+                            src={homeImage}
                             alt="Doctor"
                             sx={{
                                 width: { xs: 220, sm: 300, md: 400 },

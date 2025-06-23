@@ -4,6 +4,8 @@ import StarIcon from '@mui/icons-material/Star';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import EastIcon from '@mui/icons-material/East';
 import { Link } from 'react-router-dom';
+import home_dr1 from "../../../images/image-asset.jpeg";
+
 
 function SpecialistsOverview() {
     return (
@@ -84,7 +86,7 @@ function SpecialistsOverview() {
                                 mr: 2,
                             }}
                         >
-                            <img src="../../public/tooth.svg" alt="Dentistry" style={{ width: 24, height: 24 }} />
+                            <img src="/tooth.svg" alt="Dentistry" style={{ width: 24, height: 24 }} />
                         </Box>
                         <Typography fontWeight="bold" color="#225b63" sx={{ fontSize: { xs: 15, sm: 18 } }}>
                             Dentistry
@@ -115,7 +117,7 @@ function SpecialistsOverview() {
                                 mr: 2,
                             }}
                         >
-                            <img src="../../public/stethoscope.svg" alt="General health" style={{ width: 28, height: 28 }} />
+                            <img src="/stethoscope.svg" alt="General health" style={{ width: 28, height: 28 }} />
                         </Box>
                         <Typography fontWeight="bold" color="#225b63" sx={{ fontSize: { xs: 15, sm: 18 } }}>
                             General health
@@ -177,7 +179,7 @@ function SpecialistsOverview() {
                                 mr: 2,
                             }}
                         >
-                            <img src="../../public/brain.svg" alt="Neurology" style={{ width: 28, height: 28 }} />
+                            <img src="/brain.svg" alt="Neurology" style={{ width: 28, height: 28 }} />
                         </Box>
                         <Typography fontWeight="bold" color="#225b63" sx={{ fontSize: { xs: 15, sm: 18 } }}>
                             Neurology
@@ -231,7 +233,7 @@ function SpecialistsOverview() {
                 >
                     <Box sx={{ position: 'relative', textAlign: 'center' }}>
                         <Avatar
-                            src="../../../images/image-asset.jpeg"
+                            src={home_dr1}
                             alt="Doctor"
                             sx={{
                                 width: { xs: 220, sm: 320, md: 400 },
