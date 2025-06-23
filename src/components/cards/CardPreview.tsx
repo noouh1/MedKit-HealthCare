@@ -9,9 +9,12 @@ import SpaIcon from '@mui/icons-material/Spa'
 import WcIcon from '@mui/icons-material/Wc'
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 import React from 'react';
 import DoctorCard from './DoctorCard.tsx';
+import CountrySelect2 from '../search/ChooseCountry_2.tsx';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 function CardPreview() {
     const [value, setValue] = React.useState('');
@@ -182,19 +185,9 @@ function CardPreview() {
                 <Typography variant="body1" sx={{ color: '#1e6c72', my: 1, fontSize: {md:'15px',xs:'15px'}, fontWeight:'bold'}}>
                     Country
                 </Typography>
-                <TextField
-                fullWidth
-                label="Denmark[DK]"
-                size="small"
-                sx={{ backgroundColor: 'white' }}
-                    InputProps={{
-                        endAdornment: (
-                            <InputAdornment position="end">
-                            <GpsFixedIcon sx={{ color: '#bdbdbd', cursor: 'pointer' }} />
-                            </InputAdornment>
-                        ),          
-                    }}
-                />
+                <QueryClientProvider client={queryClient}>
+                    <CountrySelect2 label="Denmark[DK]"/>
+                </QueryClientProvider>
                 <Typography variant="body1" sx={{ color: '#1e6c72', my: 1, fontSize: {md:'15px',xs:'15px'}, fontWeight:'bold'}}>
                     Disctrict
                 </Typography>
