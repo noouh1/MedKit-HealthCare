@@ -3,6 +3,7 @@ import TagFacesIcon from '@mui/icons-material/TagFaces';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CheckIcon from '@mui/icons-material/Check';
 import { Link } from 'react-router-dom';
+import home_dr from '../../../images/home-dr.jpg';
 
 function BookingSteps() {
     return (
@@ -45,7 +46,7 @@ function BookingSteps() {
                 >
                     <Box sx={{ position: 'relative', textAlign: 'center', width: { xs: '100%', md: 'auto' } }}>
                         <Avatar
-                            src="../../../images/home-dr.jpg"
+                            src={home_dr}
                             alt="Doctor"
                             sx={{
                                 width: { xs: 220, sm: 320, md: 430 },
