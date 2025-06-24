@@ -26,7 +26,7 @@ function CardPreview() {
     return (
         <Box sx={{ backgroundColor: '#f4f8fb',  display: 'flex',flexDirection: 'row' }}>
             {/* left panel */}
-            <Box sx={{backgroundColor:'white',px:10,py:6,display: { xs: 'none', md: 'block' }}} >
+            <Box sx={{backgroundColor:'white',px:12,py:6,display: { xs: 'none', md: 'block' }}} >
                 <Typography variant="h5" sx={{ fontWeight: 'bold',color: '#1e6c72', my: 1, fontSize: {md:'20px',xs:'20px'} }}>
                 Refine Your Search
                 </Typography>

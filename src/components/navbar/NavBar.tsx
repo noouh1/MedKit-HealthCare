@@ -32,13 +32,15 @@ function NavBar() {
                 borderBottom: 'none',
                 width: '100%',
                 p: 0,
+                background: '#1e6c72',
             }}
         >
             <Toolbar
                 disableGutters
                 sx={{
-                    px: { xs: 2, sm: 4, md: 10 },
                     minHeight: { xs: 56, sm: 64 },
+                    mx:'auto',
+                    width: '90%',
                     background: '#1e6c72',
                     display: 'flex',
                     flexDirection: 'row',
@@ -54,8 +56,6 @@ function NavBar() {
                         color: 'white',
                         fontSize: { xs: 20, sm: 22 },
                         letterSpacing: 0.5,
-                        flexShrink: 0,
-                        ml: { xs: 0, sm: 2, md: 15 },
                     }}
                 >
                     MedKit
@@ -69,7 +69,6 @@ function NavBar() {
                         height: 64,
                         alignItems: 'center',
                         width: '100%',
-                        maxWidth: 900,
                         pr: 0,
                         zIndex: 1,
                         justifyContent: 'flex-end',

@@ -18,8 +18,7 @@ function BookingSteps() {
         >
             <Box
                 sx={{
-                    width: '100%',
-                    maxWidth: 1500,
+                    width: '90%',
                     mx: 'auto',
                     background: '#eef6fa',
                     borderRadius: 6,

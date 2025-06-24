@@ -6,11 +6,10 @@ function Footer() {
     return (
         <Box
             sx={{
-                width: '100%',
+                width: '90%',
                 background: '#fff',
                 display: 'flex',
                 flexDirection: { xs: 'column', md: 'row' },
-                maxWidth: 1500,
                 mx: 'auto',
                 justifyContent: 'space-between',
                 alignItems: { xs: 'flex-start', md: 'center' },

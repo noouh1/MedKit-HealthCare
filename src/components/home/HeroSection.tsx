@@ -20,8 +20,9 @@ function HeroSection() {
                 {/* Left Side */}
                 <Box
                     sx={{
-                        width: { xs: '100%', md: '60%' },
-                        p: { xs: 2, sm: 4, md: 25 },
+                        width: { xs: '100%', md: '50%' },
+                        p: { xs: 2, sm: 4, md: 0 },
+                        mx: 'auto',
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
