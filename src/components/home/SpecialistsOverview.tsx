@@ -11,18 +11,16 @@ function SpecialistsOverview() {
     return (
         <Box
             sx={{
-                width: '100%',
+                width: '90%',
                 background: '#eef6fa',
                 borderRadius: 6,
                 mt: { xs: 4, md: 8 },
                 mb: { xs: 4, md: 8 },
-                px: { xs: 1, sm: 2, md: 0 },
                 py: { xs: 4, md: 6 },
                 display: 'flex',
                 flexDirection: { xs: 'column', md: 'row' },
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                maxWidth: 1500,
                 mx: 'auto',
             }}
         >

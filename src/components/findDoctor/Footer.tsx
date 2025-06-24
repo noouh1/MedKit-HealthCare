@@ -1,11 +1,11 @@
-import { Box, Typography, Grid, Link, Stack, Container } from '@mui/material';
+import { Box, Typography, Grid, Link, Stack  } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 function Footer() {
     return (
-        <Box sx={{ background: '#fff', py: 4,borderTop: '1px solid rgba(30,108,114,0.10)' }}>
-            <Container maxWidth='xl' >
+        <Box sx={{background: 'white', py: 4,borderTop: '1px solid rgba(30,108,114,0.10)',}}>
+                    <Box sx={{ width: '90%',mx: 'auto' }}>
                 <Grid
                 container
                 spacing={2}
@@ -79,7 +79,7 @@ function Footer() {
                     </Box>
                 </Grid>
             </Grid>
-            </Container>
+        </Box>
         </Box>
     );
 }
