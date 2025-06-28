@@ -4,7 +4,7 @@ import React from 'react';
 import AppointmentTypeSelector from "../../components/findDoctor/AppointmentTypeSelector.tsx";
 import Footer from "../../components/findDoctor/Footer.tsx";
 import TimePickerGrid from "../../components/findDoctor/TimePickerGrid.tsx";
-import Calendar from '../../components/Calender.tsx';
+import Calendar from '../../components/findDoctor/Calender.tsx';
 import DoctorInfo from '../../components/cards/DoctorInfo.tsx';
 import { useLocation } from 'react-router-dom';
 
