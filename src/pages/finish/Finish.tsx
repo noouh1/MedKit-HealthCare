@@ -32,7 +32,7 @@ const Finish = () => {
                 </Typography>
             </Box>
             <Stack spacing={2} sx={{ width: 350, mx: 'auto', mt: 4 }}>
-              <Link to={'/client-zone'}>
+              <Link to={'/login'}>
                 <Button
                   variant="contained"
                   fullWidth
@@ -47,7 +47,7 @@ const Finish = () => {
                     '&:hover': { background: '#a084ca' },
                   }}
                 >
-                  Go back to Client zone
+                  Go back to login
                 </Button>
               </Link>
               <Link to={'/home'}>
