@@ -176,7 +176,7 @@ function LoginSection({ onSwitch }: LoginSectionProps) {
         <Box
           component="span"
           onClick={onSwitch}
-          sx={{ ml: 1, cursor: 'pointer', color: '#1e6c72', fontWeight: 'bold' }}
+          sx={{  cursor: 'pointer', color: '#1e6c72', fontWeight: 'bold' ,fontSize: 14,}}
         >
           Sign Up
         </Box>

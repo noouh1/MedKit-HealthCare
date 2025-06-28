@@ -10,12 +10,12 @@ function Banner() {
         textAlign: 'center',
         backgroundColor: '#1e6c72',
         width: { xs: '100%', md: '40%' },
-        display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         py: { xs: 4 },
         position: 'relative',
+        display: { xs: 'none', md: 'flex' },
       }}
     >
       {/* Image */}

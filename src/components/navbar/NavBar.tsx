@@ -46,6 +46,7 @@ function NavBar() {
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     boxShadow: '0 6px 24px 0 rgba(30,108,114,0.5)',
+                    zIndex: 10,
                 }}
             >
                 {/* Logo */}

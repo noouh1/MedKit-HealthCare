@@ -8,8 +8,8 @@ function Login() {
   const [activeForm, setActiveForm] = useState("login"); 
 
   return (
-    <Box sx={{ display: {md:'flex'}, minHeight: '94vh', overflow: 'hidden', position: 'relative' ,backgroundColor: '#f4f8fb'}}>
-      <Banner />
+    <Box sx={{ display: {md:'flex'}, minHeight: '94vh', overflow: 'hidden', position: 'relative' ,backgroundColor: '#f4f8fb',zIndex:0}}>
+      <Banner  />
 
       {/*container */}
       <Box
