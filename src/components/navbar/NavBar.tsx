@@ -49,17 +49,19 @@ function NavBar() {
                 }}
             >
                 {/* Logo */}
-                <Typography
-                    variant="h6"
-                    sx={{
-                        fontWeight: 'bold',
-                        color: 'white',
-                        fontSize: { xs: 20, sm: 22 },
-                        letterSpacing: 0.5,
-                    }}
-                >
-                    MedKit
-                </Typography>
+                <Link to="/home">
+                    <Typography
+                        variant="h6"
+                        sx={{
+                            fontWeight: 'bold',
+                            color: 'white',
+                            fontSize: { xs: 20, sm: 22 },
+                            letterSpacing: 0.5,
+                        }}
+                    >
+                        MedKit
+                    </Typography>
+                </Link>
                 {/* Desktop Navigation */}
                 <Box
                     sx={{

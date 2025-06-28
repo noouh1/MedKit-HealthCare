@@ -15,7 +15,7 @@ function BookingBar() {
                 borderRadius: 2,
                 background: '#f9fcff',
                 p: { xs: 2, md: 3 },
-                maxWidth: 700,
+                maxWidth: 900,
                 mb: 4,
                 boxShadow: '0 2px 8px rgba(30,108,114,0.04)',
                 width: '100%',
@@ -37,7 +37,7 @@ function BookingBar() {
                     select
                     label="Specialty"
                     size="small"
-                    sx={{ flex: 1, minWidth: 120 }}
+                    sx={{ width: '100%'}}
                 >
                     <MenuItem value="general-practitioner">General Practitioner</MenuItem>
                     <MenuItem value="dentist">Dentist</MenuItem>
@@ -45,13 +45,13 @@ function BookingBar() {
                     <MenuItem value="neurology">Neurology</MenuItem>
                 </TextField>
                 <QueryClientProvider client={queryClient}>
-                    <CountrySelect2 label="Location" width={160}/>
+                    <CountrySelect2 label="Location" width='100%'/>
                 </QueryClientProvider>
                 <TextField
                     label="Date"
                     type="date"
                     size="small"
-                    sx={{ flex: 1, minWidth: 120 }}
+                    sx={{ width: '100%'}}
                     InputLabelProps={{ shrink: true }}
                 />
                 <Link to="/find-a-doctor">
@@ -66,7 +66,7 @@ function BookingBar() {
                         bgcolor: '#b388d9',
                         color: 'white',
                         '&:hover': { bgcolor: '#a06cc1' },
-                        minWidth: 100,
+                        minWidth: '100%',
                         boxShadow: 'none',
                         fontWeight: 600,
                         fontSize: 16,
