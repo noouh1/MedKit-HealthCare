@@ -18,7 +18,7 @@ const pages = [
     { label: 'Home', path: '/home' },
     { label: 'Find a doctor', path: '/find-a-doctor' },
     { label: 'About us', path: '/about-us' },
-    { label: 'Client zone', path: '/client-zone' },
+    { label: 'Login', path: '/login' },
 ];
 
 function NavBar() {
@@ -46,6 +46,7 @@ function NavBar() {
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     boxShadow: '0 6px 24px 0 rgba(30,108,114,0.5)',
+                    zIndex: 10,
                 }}
             >
                 {/* Logo */}
