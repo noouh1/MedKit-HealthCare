@@ -4,10 +4,10 @@ import React from 'react';
 import AppointmentTypeSelector from "../../components/findDoctor/AppointmentTypeSelector.tsx";
 import Footer from "../../components/findDoctor/Footer.tsx";
 import TimePickerGrid from "../../components/findDoctor/TimePickerGrid.tsx";
-import Calendar from '../../components/findDoctor/Calender.tsx';
+// import Calendar from '../../components/findDoctor/Calender.tsx';
 import DoctorInfo from '../../components/cards/DoctorInfo.tsx';
 import { useLocation } from 'react-router-dom';
-
+import BigCalendar from '../../components/calendar/BigCalendar.tsx';
 
 function Book() {
   const [selectedTime, setSelectedTime] = React.useState<string>('');
@@ -59,7 +59,7 @@ function Book() {
         {/* Section 2: Doctor Info */}
         <DoctorInfo id={0} name={name} specialty={specialty} image={image} />
         {/* Section 3: Calendar */}
-        <Calendar/>
+        <BigCalendar weekendsVisible={true} currentEvents={[]} />
         {/* Section 4: Time Picker */}
         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           <TimePickerGrid value={selectedTime} onChange={setSelectedTime} />
