@@ -240,11 +240,33 @@ function CardPreview() {
             </FormControl>
                 </Box>
                 {/* cards */}
-                <Box className="Cards">
-                <DoctorCard />
+                <Box className="Cards" sx={{ 
+                    width: '100%',
+                    px: { xs: 0, sm: 1 }
+                    }}>
+                    <DoctorCard />
                 </Box>
-                <Stack spacing={2} sx={{ display: 'flex', alignItems: 'center', my: 6 }}>
-                    <Pagination count={10} size="large" />
+                <Stack spacing={2} sx={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  my: { xs: 4, md: 6 },
+                  '& .MuiPagination-root': {
+                    '& .MuiPaginationItem-root': {
+                      fontSize: { xs: '14px', md: '16px' }
+                    }
+                  }
+                }}>
+                    <Pagination 
+                      count={10} 
+                      size="medium"
+                      sx={{
+                        '& .MuiPaginationItem-root': {
+                          fontSize: { xs: '12px', sm: '14px', md: '16px' },
+                          minWidth: { xs: '24px', md: '32px' },
+                          height: { xs: '24px', md: '32px' }
+                        }
+                      }}
+                    />
                 </Stack>
             </Box>
         </Box>

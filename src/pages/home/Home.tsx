@@ -7,21 +7,31 @@ import Footer from "../../components/findDoctor/Footer.tsx";
 
 function Home() {
     return (
-        <Box>
+        <Box sx={{ 
+            width: '100%', 
+            overflowX: 'hidden',
+            minHeight: '100vh'
+        }}>
             {/* Start Section 1 */}
             <HeroSection />
             {/* End Section 1 */}
 
             {/* Start Section 2 */}
-            <HowItWorks />
+            <Box sx={{ px: { xs: 1, sm: 2, md: 0 } }}>
+                <HowItWorks />
+            </Box>
             {/* End Section 2 */}
 
             {/* Start Section 3 */}
-            <BookingSteps />
+            <Box sx={{ px: { xs: 1, sm: 2, md: 0 } }}>
+                <BookingSteps />
+            </Box>
             {/* End Section 3 */}
 
             {/* Start Section 4 */}
-            <SpecialistsOverview />
+            <Box sx={{ px: { xs: 1, sm: 2, md: 0 } }}>
+                <SpecialistsOverview />
+            </Box>
             {/* End Section 4 */}
 
             {/* Footer */}

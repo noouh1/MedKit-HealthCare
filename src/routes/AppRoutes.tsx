@@ -5,6 +5,7 @@ import AboutUs from '../pages/aboutUs/AboutUs'
 import Book from '../pages/book/Book'
 import Finish from '../pages/finish/Finish'
 import Login from '../pages/login/Login.tsx'
+import SignUpAsDoctor from '../pages/signUpAsDoctor/signUpAsDoctor.tsx'
 
 function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ function AppRoutes() {
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/login" element={<Login />} />
             <Route path="/book" element={<Book />} />
+            <Route path="/signUpAsDoctor" element={<SignUpAsDoctor />} />
             <Route path="/Finish" element={<Finish />} />
         </Routes>
       
