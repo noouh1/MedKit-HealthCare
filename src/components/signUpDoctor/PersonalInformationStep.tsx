@@ -320,8 +320,6 @@ const PersonalInformationStep: React.FC<PersonalInformationStepProps> = ({ data,
                                 >
                                     <MenuItem value="male">Male</MenuItem>
                                     <MenuItem value="female">Female</MenuItem>
-                                    <MenuItem value="other">Other</MenuItem>
-                                    <MenuItem value="prefer-not-to-say">Prefer not to say</MenuItem>
                                 </Select>
                             </FormControl>
                         </Box>
