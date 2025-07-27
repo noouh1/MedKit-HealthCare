@@ -18,6 +18,7 @@ const pages = [
     { label: 'Home', path: '/home' },
     { label: 'Find a doctor', path: '/find-a-doctor' },
     { label: 'About us', path: '/about-us' },
+    { label: 'Doctor', path: '/signUpAsDoctor' },
     { label: 'Login', path: '/login' },
 ];
 
