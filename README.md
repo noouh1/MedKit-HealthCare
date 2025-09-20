@@ -1,54 +1,96 @@
-# React + TypeScript + Vite
+# MedKit HealthCare
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive healthcare appointment booking platform built with React, TypeScript, and Material UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Find a Doctor:** Browse and filter doctors by specialty, location, and availability.
+- **Book Appointments:** Select appointment type, date, and time with a smooth, animated UI.
+- **Responsive Design:** Optimized for all devices and screen sizes.
+- **Client Zone:** Manage your appointments and view your booking history.
+- **About Us:** Learn more about the MedKit HealthCare team and mission.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Material UI (MUI)](https://mui.com/)
+- [React Router](https://reactrouter.com/)
+- [React Query](https://tanstack.com/query/latest)
+- [MUI Icons](https://mui.com/material-ui/material-icons/)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Structure
+
+```
+src/
+  api/           # API utilities (country, times)
+  assets/        # Images and icons
+  components/    # Reusable UI components
+    cards/       # Doctor cards and info
+    findDoctor/  # Find doctor-related components
+    footer/      # Footer component
+    home/        # Home page sections
+    navbar/      # Navigation bar
+    search/      # Search and booking bar
+  hooks/         # Custom React hooks
+  pages/         # Page components (Home, About, Book, etc.)
+  routes/        # App routing
+  service/       # Service layer for API/data
+  store/         # State management (if any)
+  types/         # TypeScript types and interfaces
+  main.tsx       # App entry point
+  vite-env.d.ts  # Vite environment types
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Node.js (v16+ recommended)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/medkit-healthcare.git
+   cd medkit-healthcare
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser:**
+   Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+
+## Scripts
+
+- `dev` – Start the development server
+- `build` – Build the app for production
+- `preview` – Preview the production build
+
+## Customization
+
+- **Add Doctors:** Update `src/assets/` with new images and edit doctor data in the relevant components.
+- **Edit Appointment Types:** Modify `AppointmentTypeSelector.tsx` for new or changed appointment types.
+- **API Integration:** Replace mock data in `api/` and `service/` folders with your backend endpoints.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+**MedKit HealthCare** – Making healthcare appointments simple and accessible.
